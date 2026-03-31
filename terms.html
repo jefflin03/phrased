@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Terms of Service — Phrased</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: "Inter", sans-serif;
+      background: #fff;
+      color: #1a1a1a;
+      font-size: 15px;
+      line-height: 1.75;
+    }
+    .page { max-width: 760px; margin: 0 auto; padding: 60px 40px 100px; }
+
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 24px;
+      border-bottom: 2px solid #111;
+      margin-bottom: 48px;
+    }
+    .brand { font-size: 13px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: #111; }
+    .nav { display: flex; gap: 20px; font-size: 12px; font-weight: 500; }
+    .nav a { color: #aaa; text-decoration: none; transition: color 0.15s; }
+    .nav a:hover, .nav a.active { color: #111; }
+    .nav a.active { font-weight: 600; }
+
+    h1 { font-size: 32px; font-weight: 700; letter-spacing: -0.02em; margin-bottom: 6px; }
+    .meta { font-size: 13px; color: #999; padding-top: 10px; border-top: 1px solid #eee; margin: 10px 0 40px; }
+
+    .toc {
+      background: #f9f9f9;
+      border: 1px solid #eee;
+      padding: 20px 24px;
+      margin-bottom: 52px;
+    }
+    .toc-title { font-size: 10px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #999; margin-bottom: 12px; }
+    .toc ol { padding-left: 18px; }
+    .toc li { font-size: 13px; color: #555; margin-bottom: 4px; line-height: 1.6; }
+    .toc a { color: #555; text-decoration: none; }
+    .toc a:hover { color: #111; text-decoration: underline; }
+
+    .summary {
+      border-left: 3px solid #111;
+      background: #f9f9f9;
+      padding: 16px 20px;
+      margin-bottom: 52px;
+      font-size: 14px;
+      color: #444;
+      line-height: 1.7;
+    }
+    .summary strong { display: block; font-size: 10px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #aaa; margin-bottom: 7px; }
+
+    .section { margin-bottom: 52px; scroll-margin-top: 20px; }
+
+    h2 {
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      padding-bottom: 10px;
+      border-bottom: 2px solid currentColor;
+      margin-bottom: 18px;
+    }
+
+    .s1 h2  { color: #7c3aed; }
+    .s2 h2  { color: #0ea5e9; }
+    .s3 h2  { color: #10b981; }
+    .s4 h2  { color: #f59e0b; }
+    .s5 h2  { color: #ef4444; }
+    .s6 h2  { color: #8b5cf6; }
+    .s7 h2  { color: #06b6d4; }
+    .s8 h2  { color: #f97316; }
+    .s9 h2  { color: #6366f1; }
+    .s10 h2 { color: #14b8a6; }
+    .s11 h2 { color: #ec4899; }
+    .s12 h2 { color: #84cc16; }
+    .s13 h2 { color: #a78bfa; }
+    .s14 h2 { color: #fb923c; }
+    .s15 h2 { color: #38bdf8; }
+    .s16 h2 { color: #4ade80; }
+
+    h3 { font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.07em; color: #333; margin: 22px 0 8px; }
+
+    p { color: #374151; margin-bottom: 14px; }
+    p:last-child { margin-bottom: 0; }
+
+    ul { list-style: none; padding: 0; margin: 0 0 14px; }
+    li { padding: 5px 0 5px 20px; position: relative; color: #374151; }
+    li::before { content: "—"; position: absolute; left: 0; color: #ccc; }
+
+    table { width: 100%; border-collapse: collapse; margin: 14px 0 18px; font-size: 14px; }
+    thead th {
+      text-align: left;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #999;
+      border-bottom: 1px solid #e5e7eb;
+      padding: 8px 12px 8px 0;
+    }
+    td { padding: 10px 12px 10px 0; border-bottom: 1px solid #f3f4f6; color: #374151; }
+    tr:last-child td { border-bottom: none; }
+
+    .notice {
+      background: #fef2f2;
+      border: 1px solid #fecaca;
+      padding: 14px 18px;
+      margin: 16px 0;
+      font-size: 14px;
+      color: #7f1d1d;
+      line-height: 1.7;
+    }
+
+    a { color: #111; text-underline-offset: 2px; }
+    a:hover { color: #555; }
+
+    hr { border: none; border-top: 1px solid #e5e7eb; margin: 56px 0 28px; }
+    footer { font-size: 12px; color: #bbb; display: flex; justify-content: space-between; }
+    footer a { color: #bbb; text-decoration: none; }
+    footer a:hover { color: #374151; }
+
+    @media (max-width: 600px) {
+      .page { padding: 32px 20px 60px; }
+      .topbar { flex-direction: column; align-items: flex-start; gap: 12px; }
+      footer { flex-direction: column; gap: 8px; }
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+
+  <div class="topbar">
+    <div class="brand">Phrased</div>
+    <div class="nav">
+      <a href="privacy">Privacy Policy</a>
+      <a href="terms" class="active">Terms of Service</a>
+    </div>
+  </div>
+
+  <h1>Terms of Service</h1>
+  <div class="meta">Last Updated: March 25, 2026 &nbsp;·&nbsp; Effective immediately upon use of the Application</div>
+
+  <div class="summary">
+    <strong>Plain English Summary</strong>
+    By using Phrased you agree to these Terms. The Application generates AI reply suggestions based on your screen content. You are solely responsible for every message you send. Subscriptions renew automatically and can be cancelled at any time through Google Play. Disputes are resolved through individual arbitration — not class actions.
+  </div>
+
+  <div class="toc">
+    <div class="toc-title">Table of Contents</div>
+    <ol>
+      <li><a href="#s1">Definitions</a></li>
+      <li><a href="#s2">Agreement to Terms</a></li>
+      <li><a href="#s3">Eligibility</a></li>
+      <li><a href="#s4">Your Account</a></li>
+      <li><a href="#s5">Subscriptions and Billing</a></li>
+      <li><a href="#s6">Acceptable Use</a></li>
+      <li><a href="#s7">Screen Capture and Permissions</a></li>
+      <li><a href="#s8">AI-Generated Content</a></li>
+      <li><a href="#s9">Intellectual Property</a></li>
+      <li><a href="#s10">Third-Party Services</a></li>
+      <li><a href="#s11">Disclaimer of Warranties</a></li>
+      <li><a href="#s12">Limitation of Liability</a></li>
+      <li><a href="#s13">Arbitration and Class Action Waiver</a></li>
+      <li><a href="#s14">Termination</a></li>
+      <li><a href="#s15">Changes to These Terms</a></li>
+      <li><a href="#s16">Contact</a></li>
+    </ol>
+  </div>
+
+  <!-- 1 -->
+  <div class="section s1" id="s1">
+    <h2>1. Definitions</h2>
+    <p><strong>"Application"</strong> means the Phrased mobile application and all associated features, tools, and updates.</p>
+    <p><strong>"Company," "We," "Us," or "Our"</strong> means Phrased, the operator of the Application.</p>
+    <p><strong>"Content"</strong> means AI-generated reply suggestions produced by the Application on your behalf.</p>
+    <p><strong>"Screen Content"</strong> means the visual content of your Device screen at the moment you tap the floating bubble.</p>
+    <p><strong>"Extracted Text"</strong> means text identified from Screen Content via on-device OCR, transmitted to our AI provider to generate suggestions.</p>
+    <p><strong>"Subscription"</strong> means a recurring paid plan providing access to the Application's features.</p>
+    <p><strong>"You"</strong> means the individual using the Application, or the legal entity on whose behalf the individual uses the Application.</p>
+  </div>
+
+  <!-- 2 -->
+  <div class="section s2" id="s2">
+    <h2>2. Agreement to Terms</h2>
+    <p>Please read these Terms of Service ("Terms") carefully before accessing or using the Application. These Terms constitute a legally binding agreement between You and the Company.</p>
+    <p>By creating an account or using the Application in any way, You acknowledge that You have read, understood, and agreed to be bound by these Terms and our <a href="privacy">Privacy Policy</a>, which is incorporated herein by reference. If You do not agree, You must discontinue use of the Application immediately.</p>
+  </div>
+
+  <!-- 3 -->
+  <div class="section s3" id="s3">
+    <h2>3. Eligibility</h2>
+    <p>You represent and warrant that:</p>
+    <ul>
+      <li>You are at least 13 years old</li>
+      <li>If You are between 13 and 17 years old, You may only use the Application with the consent and supervision of a parent or legal guardian, who agrees to be fully responsible for all activities under the account</li>
+      <li>You have a valid Google account or email address to register</li>
+      <li>You have not been previously suspended or terminated from the Application</li>
+      <li>Your use of the Application does not violate any applicable law or regulation</li>
+    </ul>
+  </div>
+
+  <!-- 4 -->
+  <div class="section s4" id="s4">
+    <h2>4. Your Account</h2>
+    <p>You are solely responsible for maintaining the confidentiality and security of your account credentials and for all activity that occurs under your account. You agree not to share your credentials with any other person.</p>
+    <p>Please notify us immediately at <a href="mailto:support@phrased.app">support@phrased.app</a> if you suspect unauthorized access to your account. We are not liable for any losses arising from unauthorized use of your account.</p>
+    <p>We reserve the right to suspend or terminate accounts that violate these Terms, engage in abusive behavior, or attempt to circumvent usage or billing limits.</p>
+  </div>
+
+  <!-- 5 -->
+  <div class="section s5" id="s5">
+    <h2>5. Subscriptions and Billing</h2>
+    <p>The Application offers the following Subscription plans, billed through Google Play:</p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Plan</th>
+          <th>Price</th>
+          <th>Free Trial</th>
+          <th>Billing Period</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Monthly</td>
+          <td>$9.99</td>
+          <td>3 days</td>
+          <td>Every 30 days</td>
+        </tr>
+        <tr>
+          <td>Yearly</td>
+          <td>$49.99</td>
+          <td>3 days</td>
+          <td>Every 365 days</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>All Subscriptions automatically renew at the end of each billing period unless cancelled at least 24 hours before the renewal date. You may cancel at any time through Google Play → Subscriptions. Cancellation takes effect at the end of the current billing period — you retain access until then.</p>
+    <p>Purchases and billing are processed by Google Play. Their terms govern payment processing, renewals, and refunds. We do not offer refunds for partial billing periods except where required by applicable law.</p>
+    <p>If You start a free trial and cancel before it ends, the trial will not be reinstated. Prices may change with reasonable advance notice. Continued use after a price change constitutes acceptance of the new pricing.</p>
+  </div>
+
+  <!-- 6 -->
+  <div class="section s6" id="s6">
+    <h2>6. Acceptable Use</h2>
+    <p>You agree not to use the Application to:</p>
+    <ul>
+      <li>Harass, deceive, manipulate, threaten, or harm any person</li>
+      <li>Generate messages intended to defraud, phish, impersonate, or scam others</li>
+      <li>Facilitate any illegal, fraudulent, or manipulative activity</li>
+      <li>Upload, transmit, or generate violent, explicit, unlawful, or otherwise harmful content</li>
+      <li>Reverse engineer, decompile, or attempt to derive the source code of the Application</li>
+      <li>Use automated scripts or tools to abuse AI generation features or circumvent usage limits</li>
+      <li>Access non-public systems or data, or interfere with the Application's operation</li>
+      <li>Share account credentials with or grant access to any other person</li>
+    </ul>
+    <p>The Company is not responsible for how You use AI-generated Content. You are fully and solely responsible for every message You send, regardless of whether it was suggested by the Application.</p>
+  </div>
+
+  <!-- 7 -->
+  <div class="section s7" id="s7">
+    <h2>7. Screen Capture and Permissions</h2>
+    <p>By granting screen capture permission when prompted, You acknowledge and agree that:</p>
+    <ul>
+      <li>The Application will capture a screenshot of your screen when you tap the floating bubble</li>
+      <li>That screenshot is processed on your Device to extract visible conversation text</li>
+      <li>Extracted Text is transmitted to an AI API to generate reply suggestions</li>
+      <li>Screenshots are never stored, uploaded, or transmitted — they are discarded immediately after on-device processing</li>
+    </ul>
+    <p>You are solely responsible for ensuring You have appropriate authorization to capture and process screen content that may include messages or personal information belonging to other people. Do not use the Application to process content You are not authorized to view or interact with.</p>
+  </div>
+
+  <!-- 8 -->
+  <div class="section s8" id="s8">
+    <h2>8. AI-Generated Content</h2>
+    <p>Reply suggestions generated by the Application are produced by a third-party AI model (Anthropic). Suggestions are automated approximations and may be inaccurate, inappropriate, or unsuitable for your specific situation.</p>
+    <ul>
+      <li>The Company does not guarantee the accuracy, tone, or appropriateness of any suggestion</li>
+      <li>Suggestions do not constitute advice of any kind — social, legal, emotional, or otherwise</li>
+      <li>You are solely responsible for reviewing and deciding whether to send any suggested reply</li>
+      <li>The Company is not liable for any consequences arising from messages You send</li>
+    </ul>
+  </div>
+
+  <!-- 9 -->
+  <div class="section s9" id="s9">
+    <h2>9. Intellectual Property</h2>
+    <p>The Application, its design, branding, code, and underlying technology are owned by the Company or its licensors and are protected by applicable intellectual property laws. You may not copy, modify, distribute, sell, or create derivative works from any part of the Application without prior written permission.</p>
+    <p>By submitting User Content (such as onboarding responses), You represent that You own or have rights to that content. You grant the Company a limited, non-exclusive license to use such content solely to operate and improve the Application.</p>
+    <p>AI-generated reply suggestions are produced on Your behalf. The Company claims no ownership over suggestions generated for You.</p>
+  </div>
+
+  <!-- 10 -->
+  <div class="section s10" id="s10">
+    <h2>10. Third-Party Services</h2>
+    <p>The Application integrates with third-party services including Anthropic (AI), Supabase (database), and Google Play (billing). Your use of those services is subject to their respective terms and privacy policies. The Company is not responsible for the availability, accuracy, or conduct of any third-party service.</p>
+  </div>
+
+  <!-- 11 -->
+  <div class="section s11" id="s11">
+    <h2>11. Disclaimer of Warranties</h2>
+    <p>THE APPLICATION IS PROVIDED "AS IS" AND "AS AVAILABLE" WITHOUT WARRANTIES OF ANY KIND, EXPRESS OR IMPLIED. THE COMPANY DISCLAIMS ALL WARRANTIES INCLUDING MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, ACCURACY, AND NON-INFRINGEMENT.</p>
+    <p>Specifically, the Company does not warrant that:</p>
+    <ul>
+      <li>The Application will always be available, uninterrupted, or error-free</li>
+      <li>AI-generated suggestions will be accurate, appropriate, or suitable for your situation</li>
+      <li>Screen capture and OCR will function correctly with every messaging application</li>
+      <li>The Application will meet your expectations or requirements</li>
+    </ul>
+    <p>You use the Application at your sole risk.</p>
+  </div>
+
+  <!-- 12 -->
+  <div class="section s12" id="s12">
+    <h2>12. Limitation of Liability</h2>
+    <p>TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, THE COMPANY'S TOTAL LIABILITY FOR ANY CLAIM ARISING OUT OF OR RELATING TO THESE TERMS OR THE APPLICATION SHALL NOT EXCEED THE GREATER OF:</p>
+    <ul>
+      <li>The amount You paid to the Company in the twelve (12) months preceding the claim, or</li>
+      <li>One hundred US dollars (USD $100)</li>
+    </ul>
+    <p>THE COMPANY IS NOT LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, INCLUDING LOSS OF PROFITS, DATA, RELATIONSHIPS, OR REPUTATION, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.</p>
+    <p>The Company is not responsible for the content of any message You send, including those based on AI-generated suggestions from the Application.</p>
+  </div>
+
+  <!-- 13 -->
+  <div class="section s13" id="s13">
+    <h2>13. Arbitration and Class Action Waiver</h2>
+
+    <div class="notice">
+      Please read this section carefully. It affects your legal rights, including your ability to file a lawsuit in court.
+    </div>
+
+    <h3>Binding Arbitration</h3>
+    <p>Except as provided below, all disputes, claims, or controversies arising out of or relating to these Terms or the Application shall be resolved through binding individual arbitration administered by the American Arbitration Association (AAA) under its Commercial Arbitration Rules. Arbitration will be conducted in English. The arbitrator's decision shall be final and binding.</p>
+
+    <h3>Class Action Waiver</h3>
+    <p>YOU AND THE COMPANY AGREE THAT EACH MAY BRING CLAIMS AGAINST THE OTHER ONLY IN AN INDIVIDUAL CAPACITY AND NOT AS A PLAINTIFF OR CLASS MEMBER IN ANY CLASS, CONSOLIDATED, OR REPRESENTATIVE ACTION. The arbitrator may not consolidate more than one person's claims and may not otherwise preside over any class or representative proceeding.</p>
+
+    <h3>Exceptions</h3>
+    <p>Either party may bring an individual action in small claims court. Nothing in this section prevents either party from seeking injunctive or other equitable relief in a court of competent jurisdiction to prevent actual or threatened infringement of intellectual property rights.</p>
+
+    <h3>Governing Law</h3>
+    <p>These Terms are governed by the laws of the State of Delaware, without regard to its conflict of law provisions, except where applicable local law requires otherwise.</p>
+  </div>
+
+  <!-- 14 -->
+  <div class="section s14" id="s14">
+    <h2>14. Termination</h2>
+    <p>We may suspend or terminate your access to the Application at any time, with or without cause, with reasonable notice where practicable. Grounds for immediate termination include violation of these Terms, abusive conduct, or attempted circumvention of billing or usage systems.</p>
+    <p>You may delete your account at any time via Settings → Delete Account. Upon deletion, your personal data will be removed from our systems in accordance with our Privacy Policy. All rights and licenses granted to You under these Terms will immediately cease upon termination.</p>
+  </div>
+
+  <!-- 15 -->
+  <div class="section s15" id="s15">
+    <h2>15. Changes to These Terms</h2>
+    <p>The Company may update these Terms at any time. For material changes, we will provide notice within the Application or by email at least 14 days before the changes take effect. Continued use of the Application after the effective date constitutes your acceptance of the updated Terms.</p>
+    <p>If any provision of these Terms is found to be invalid or unenforceable, the remaining provisions shall remain in full force and effect. Our failure to enforce any right or provision does not constitute a waiver of that right.</p>
+  </div>
+
+  <!-- 16 -->
+  <div class="section s16" id="s16">
+    <h2>16. Contact</h2>
+    <p>If you have questions about these Terms, please contact us:</p>
+    <ul>
+      <li>Email: <a href="mailto:support@phrased.app">support@phrased.app</a></li>
+    </ul>
+  </div>
+
+  <hr />
+  <footer>
+    <span>© 2026 Phrased. All rights reserved.</span>
+    <a href="privacy">Privacy Policy →</a>
+  </footer>
+
+</div>
+</body>
+</html>

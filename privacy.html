@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — Phrased</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: "Inter", sans-serif;
+      background: #fff;
+      color: #1a1a1a;
+      font-size: 15px;
+      line-height: 1.75;
+    }
+    .page { max-width: 760px; margin: 0 auto; padding: 60px 40px 100px; }
+
+    /* Top bar */
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 24px;
+      border-bottom: 2px solid #111;
+      margin-bottom: 48px;
+    }
+    .brand { font-size: 13px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: #111; }
+    .nav { display: flex; gap: 20px; font-size: 12px; font-weight: 500; }
+    .nav a { color: #aaa; text-decoration: none; transition: color 0.15s; }
+    .nav a:hover, .nav a.active { color: #111; }
+    .nav a.active { font-weight: 600; }
+
+    /* Title */
+    h1 { font-size: 32px; font-weight: 700; letter-spacing: -0.02em; margin-bottom: 6px; }
+    .meta { font-size: 13px; color: #999; padding-top: 10px; border-top: 1px solid #eee; margin: 10px 0 40px; }
+
+    /* TOC */
+    .toc {
+      background: #f9f9f9;
+      border: 1px solid #eee;
+      padding: 20px 24px;
+      margin-bottom: 52px;
+    }
+    .toc-title { font-size: 10px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #999; margin-bottom: 12px; }
+    .toc ol { padding-left: 18px; }
+    .toc li { font-size: 13px; color: #555; margin-bottom: 4px; line-height: 1.6; }
+    .toc a { color: #555; text-decoration: none; }
+    .toc a:hover { color: #111; text-decoration: underline; }
+
+    /* Summary banner */
+    .summary {
+      border-left: 3px solid #111;
+      background: #f9f9f9;
+      padding: 16px 20px;
+      margin-bottom: 52px;
+      font-size: 14px;
+      color: #444;
+      line-height: 1.7;
+    }
+    .summary strong { display: block; font-size: 10px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #aaa; margin-bottom: 7px; }
+
+    /* Sections */
+    .section { margin-bottom: 52px; scroll-margin-top: 20px; }
+
+    h2 {
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      padding-bottom: 10px;
+      border-bottom: 2px solid currentColor;
+      margin-bottom: 18px;
+    }
+
+    .s1 h2  { color: #7c3aed; }
+    .s2 h2  { color: #0ea5e9; }
+    .s3 h2  { color: #10b981; }
+    .s4 h2  { color: #f59e0b; }
+    .s5 h2  { color: #ef4444; }
+    .s6 h2  { color: #8b5cf6; }
+    .s7 h2  { color: #06b6d4; }
+    .s8 h2  { color: #f97316; }
+    .s9 h2  { color: #6366f1; }
+    .s10 h2 { color: #14b8a6; }
+
+    h3 { font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.07em; color: #333; margin: 22px 0 8px; }
+
+    p { color: #374151; margin-bottom: 14px; }
+    p:last-child { margin-bottom: 0; }
+
+    ul { list-style: none; padding: 0; margin: 0 0 14px; }
+    li { padding: 5px 0 5px 20px; position: relative; color: #374151; }
+    li::before { content: "—"; position: absolute; left: 0; color: #ccc; }
+
+    .callout {
+      background: #fffbeb;
+      border: 1px solid #fde68a;
+      padding: 14px 18px;
+      margin: 16px 0;
+      font-size: 14px;
+      color: #78350f;
+      line-height: 1.7;
+    }
+
+    .tag {
+      display: inline-block;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      background: #f0fdf4;
+      color: #166534;
+      border: 1px solid #bbf7d0;
+      padding: 2px 8px;
+      margin-bottom: 10px;
+    }
+
+    a { color: #111; text-underline-offset: 2px; }
+    a:hover { color: #555; }
+
+    hr { border: none; border-top: 1px solid #e5e7eb; margin: 56px 0 28px; }
+    footer { font-size: 12px; color: #bbb; display: flex; justify-content: space-between; }
+    footer a { color: #bbb; text-decoration: none; }
+    footer a:hover { color: #374151; }
+
+    @media (max-width: 600px) {
+      .page { padding: 32px 20px 60px; }
+      .topbar { flex-direction: column; align-items: flex-start; gap: 12px; }
+      footer { flex-direction: column; gap: 8px; }
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+
+  <div class="topbar">
+    <div class="brand">Phrased</div>
+    <div class="nav">
+      <a href="privacy" class="active">Privacy Policy</a>
+      <a href="terms">Terms of Service</a>
+    </div>
+  </div>
+
+  <h1>Privacy Policy</h1>
+  <div class="meta">Last Updated: March 25, 2026 &nbsp;·&nbsp; Effective immediately upon use of the Application</div>
+
+  <div class="summary">
+    <strong>Plain English Summary</strong>
+    Phrased does not store, sell, or share your messages or screenshots. When you tap the bubble, your screen is processed on-device and only the extracted text is briefly sent to our AI provider to generate reply suggestions. Nothing is retained after your session ends. You are always in control.
+  </div>
+
+  <div class="toc">
+    <div class="toc-title">Table of Contents</div>
+    <ol>
+      <li><a href="#s1">Definitions</a></li>
+      <li><a href="#s2">Information We Collect</a></li>
+      <li><a href="#s3">Screen Capture and On-Device Processing</a></li>
+      <li><a href="#s4">How We Use Your Information</a></li>
+      <li><a href="#s5">Third-Party Services</a></li>
+      <li><a href="#s6">Permissions We Request</a></li>
+      <li><a href="#s7">Data Retention and Deletion</a></li>
+      <li><a href="#s8">Children's Privacy</a></li>
+      <li><a href="#s9">Your Rights</a></li>
+      <li><a href="#s10">Contact Us</a></li>
+    </ol>
+  </div>
+
+  <!-- 1 -->
+  <div class="section s1" id="s1">
+    <h2>1. Definitions</h2>
+    <p><strong>"Application"</strong> means the Phrased mobile application and all associated features, tools, and updates.</p>
+    <p><strong>"Company," "We," "Us," or "Our"</strong> means Phrased, the operator of the Application.</p>
+    <p><strong>"Device"</strong> means any Android device used to access the Application.</p>
+    <p><strong>"Screen Content"</strong> means the visual content of your Device's screen at the moment you tap the floating bubble, including any conversation text visible on screen.</p>
+    <p><strong>"Extracted Text"</strong> means text identified from Screen Content via on-device OCR processing. Extracted Text does not include screenshots or images.</p>
+    <p><strong>"You"</strong> means the individual using the Application.</p>
+  </div>
+
+  <!-- 2 -->
+  <div class="section s2" id="s2">
+    <h2>2. Information We Collect</h2>
+
+    <h3>Account Information</h3>
+    <ul>
+      <li>Name and email address, collected when you register via Google, Facebook, or email</li>
+      <li>Texting personality preferences captured during onboarding</li>
+    </ul>
+
+    <h3>Usage Data</h3>
+    <ul>
+      <li>Number of AI reply suggestions generated per billing period, used solely to enforce plan limits</li>
+      <li>Subscription status and transaction history, processed via Google Play Billing</li>
+      <li>Aggregate feature usage (e.g., which tabs you use) — not the content of any interaction</li>
+    </ul>
+
+    <h3>What We Do Not Collect</h3>
+    <ul>
+      <li>Screenshots or images from your Device screen</li>
+      <li>The content of your conversations or messages</li>
+      <li>Contact names, phone numbers, or identifiers from your messaging apps</li>
+      <li>Location data of any kind</li>
+    </ul>
+  </div>
+
+  <!-- 3 -->
+  <div class="section s3" id="s3">
+    <h2>3. Screen Capture and On-Device Processing</h2>
+
+    <div class="tag">Most Important Section</div>
+
+    <p>The core function of Phrased requires the ability to read the conversation visible on your screen. This is how it works:</p>
+
+    <div class="callout">
+      When you tap the floating bubble, the Application captures a screenshot of your current screen using Android's MediaProjection API. That screenshot is immediately processed on your Device using Google ML Kit's on-device OCR to extract the visible text. The screenshot is then discarded. Only the Extracted Text is transmitted to Anthropic's API to generate reply suggestions. Extracted Text is not stored, logged, or retained after suggestions are returned to you.
+    </div>
+
+    <ul>
+      <li>Screenshots are processed entirely on your Device and are never uploaded, stored, or transmitted</li>
+      <li>Only Extracted Text (plain text) is sent to our AI provider — not the screenshot itself</li>
+      <li>We do not log, store, or analyze the content of your conversations at any point</li>
+      <li>No conversation data persists after your session ends</li>
+      <li>You are shown an Android system confirmation dialog before screen capture begins each session, and you may decline at any time</li>
+    </ul>
+
+    <p>You are responsible for ensuring you have appropriate authorization to capture and process screen content that may include messages from other people.</p>
+  </div>
+
+  <!-- 4 -->
+  <div class="section s4" id="s4">
+    <h2>4. How We Use Your Information</h2>
+    <ul>
+      <li>To generate AI reply suggestions based on the conversation visible on your screen</li>
+      <li>To personalize reply tone based on your onboarding personality preferences</li>
+      <li>To enforce usage limits associated with your subscription plan</li>
+      <li>To restore purchases and manage your subscription state</li>
+      <li>To communicate with you about your account where necessary</li>
+    </ul>
+    <p>We do not use your information to train AI models. We do not sell your information to any third party. We do not display advertisements.</p>
+  </div>
+
+  <!-- 5 -->
+  <div class="section s5" id="s5">
+    <h2>5. Third-Party Services</h2>
+    <p>Phrased integrates with the following third-party services. Each is governed by its own privacy policy, which we encourage you to review.</p>
+    <ul>
+      <li><strong>Anthropic</strong> — receives Extracted Text to generate reply suggestions. Anthropic does not use API inputs to train models by default. See <a href="https://www.anthropic.com/privacy" target="_blank">anthropic.com/privacy</a>.</li>
+      <li><strong>Supabase</strong> — hosts our database, storing account information, tone preferences, and reply counts. See <a href="https://supabase.com/privacy" target="_blank">supabase.com/privacy</a>.</li>
+      <li><strong>Google Play Billing</strong> — processes subscription payments. We do not receive or store your payment details. See <a href="https://policies.google.com/privacy" target="_blank">policies.google.com/privacy</a>.</li>
+      <li><strong>Google ML Kit</strong> — performs OCR processing entirely on your Device. No data is transmitted to Google through this process. See <a href="https://developers.google.com/ml-kit/terms" target="_blank">developers.google.com/ml-kit/terms</a>.</li>
+    </ul>
+  </div>
+
+  <!-- 6 -->
+  <div class="section s6" id="s6">
+    <h2>6. Permissions We Request</h2>
+    <ul>
+      <li><strong>Display over other apps (SYSTEM_ALERT_WINDOW)</strong> — required to render the floating bubble on top of messaging apps</li>
+      <li><strong>Screen capture (MediaProjection)</strong> — required to read the conversation on your screen when you tap the bubble. Android presents a system confirmation dialog before every capture session</li>
+      <li><strong>Internet</strong> — required to transmit Extracted Text to the AI API and to sync your account</li>
+      <li><strong>Foreground service</strong> — required to keep the floating bubble active while you use other apps</li>
+    </ul>
+    <p>All permissions are used solely for the functions described above. You may revoke screen capture permission at any time by dismissing the system dialog or disabling the overlay service from within the Application.</p>
+  </div>
+
+  <!-- 7 -->
+  <div class="section s7" id="s7">
+    <h2>7. Data Retention and Deletion</h2>
+    <ul>
+      <li>Account data is retained for as long as your account remains active</li>
+      <li>Reply counts reset monthly in accordance with your billing cycle</li>
+      <li>Screen Content and Extracted Text are never stored — they exist in memory only during active processing and are discarded immediately after suggestions are returned</li>
+      <li>You may delete your account at any time via Settings → Delete Account, which permanently and irreversibly removes all personal data we hold about you</li>
+    </ul>
+  </div>
+
+  <!-- 8 -->
+  <div class="section s8" id="s8">
+    <h2>8. Children's Privacy</h2>
+    <p>The Application is not directed to children under the age of 13. We do not knowingly collect personal information from children under 13. If you believe a child has provided us with personal information, please contact us at <a href="mailto:privacy@phrased.app">privacy@phrased.app</a> and we will delete it promptly.</p>
+  </div>
+
+  <!-- 9 -->
+  <div class="section s9" id="s9">
+    <h2>9. Your Rights</h2>
+    <p>Depending on your jurisdiction, you may have the right to access, correct, or delete the personal data we hold about you, to restrict or object to certain processing, and to data portability. To exercise any of these rights, or to submit a privacy-related inquiry, contact us at <a href="mailto:privacy@phrased.app">privacy@phrased.app</a>. We aim to respond within five business days.</p>
+    <p>We may update this Privacy Policy from time to time. For material changes, we will provide notice within the Application or by email before the changes take effect. The "Last Updated" date at the top of this document reflects the most recent revision. Continued use of the Application after the effective date constitutes acceptance of the updated policy.</p>
+  </div>
+
+  <!-- 10 -->
+  <div class="section s10" id="s10">
+    <h2>10. Contact Us</h2>
+    <p>If you have questions or concerns about this Privacy Policy or our data practices, please contact us:</p>
+    <ul>
+ 
