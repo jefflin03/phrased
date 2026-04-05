@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Privacy Policy — Phrased</title>
+  <link rel="icon" type="image/png" href="phrased-favicon.png" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -142,11 +143,11 @@
   </div>
 
   <h1>Privacy Policy</h1>
-  <div class="meta">Last Updated: March 25, 2026 &nbsp;·&nbsp; Effective immediately upon use of the Application</div>
+  <div class="meta">Last Updated: April 5, 2026 &nbsp;&middot;&nbsp; Effective immediately upon use of the Application</div>
 
   <div class="summary">
     <strong>Plain English Summary</strong>
-    Phrased does not store, sell, or share your messages or screenshots. When you tap the bubble, your screen is processed on-device and only the extracted text is briefly sent to our AI provider to generate reply suggestions. Nothing is retained after your session ends. You are always in control.
+    When you tap the bubble, Phrased captures a screenshot of your screen and sends it securely to our AI provider (Anthropic) to generate reply suggestions. The screenshot is not stored, logged, or retained by Phrased or Anthropic after processing. No conversation data persists after your session ends. You are always in control.
   </div>
 
   <div class="toc">
@@ -154,7 +155,7 @@
     <ol>
       <li><a href="#s1">Definitions</a></li>
       <li><a href="#s2">Information We Collect</a></li>
-      <li><a href="#s3">Screen Capture and On-Device Processing</a></li>
+      <li><a href="#s3">Screen Capture and Processing</a></li>
       <li><a href="#s4">How We Use Your Information</a></li>
       <li><a href="#s5">Third-Party Services</a></li>
       <li><a href="#s6">Permissions We Request</a></li>
@@ -171,8 +172,7 @@
     <p><strong>"Application"</strong> means the Phrased mobile application and all associated features, tools, and updates.</p>
     <p><strong>"Company," "We," "Us," or "Our"</strong> means Phrased, the operator of the Application.</p>
     <p><strong>"Device"</strong> means any Android device used to access the Application.</p>
-    <p><strong>"Screen Content"</strong> means the visual content of your Device's screen at the moment you tap the floating bubble, including any conversation text visible on screen.</p>
-    <p><strong>"Extracted Text"</strong> means text identified from Screen Content via on-device OCR processing. Extracted Text does not include screenshots or images.</p>
+    <p><strong>"Screen Content"</strong> means the visual content of your Device's screen at the moment you tap the floating bubble, captured as a screenshot image.</p>
     <p><strong>"You"</strong> means the individual using the Application.</p>
   </div>
 
@@ -195,8 +195,7 @@
 
     <h3>What We Do Not Collect</h3>
     <ul>
-      <li>Screenshots or images from your Device screen</li>
-      <li>The content of your conversations or messages</li>
+      <li>We do not store, log, or retain screenshots or the content of your conversations</li>
       <li>Contact names, phone numbers, or identifiers from your messaging apps</li>
       <li>Location data of any kind</li>
     </ul>
@@ -204,22 +203,23 @@
 
   <!-- 3 -->
   <div class="section s3" id="s3">
-    <h2>3. Screen Capture and On-Device Processing</h2>
+    <h2>3. Screen Capture and Processing</h2>
 
     <div class="tag">Most Important Section</div>
 
     <p>The core function of Phrased requires the ability to read the conversation visible on your screen. This is how it works:</p>
 
     <div class="callout">
-      When you tap the floating bubble, the Application captures a screenshot of your current screen using Android's MediaProjection API. That screenshot is immediately processed on your Device using Google ML Kit's on-device OCR to extract the visible text. The screenshot is then discarded. Only the Extracted Text is transmitted to Anthropic's API to generate reply suggestions. Extracted Text is not stored, logged, or retained after suggestions are returned to you.
+      When you tap the floating bubble, the Application captures a screenshot of your current screen using Android's MediaProjection API. The screenshot is compressed, encoded, and transmitted securely to Anthropic's API (our AI provider) to analyze the conversation and generate reply suggestions. The screenshot is discarded from your device immediately after transmission. Neither Phrased nor Anthropic stores, logs, or retains the screenshot after processing is complete.
     </div>
 
     <ul>
-      <li>Screenshots are processed entirely on your Device and are never uploaded, stored, or transmitted</li>
-      <li>Only Extracted Text (plain text) is sent to our AI provider — not the screenshot itself</li>
-      <li>We do not log, store, or analyze the content of your conversations at any point</li>
+      <li>Screenshots are transmitted securely (HTTPS/TLS) to Anthropic's API for processing</li>
+      <li>Screenshots are not stored, logged, or retained by Phrased or Anthropic after reply suggestions are generated</li>
+      <li>We do not use screenshots or conversation content to train AI models</li>
       <li>No conversation data persists after your session ends</li>
       <li>You are shown an Android system confirmation dialog before screen capture begins each session, and you may decline at any time</li>
+      <li>Screenshots are compressed and scaled down before transmission to minimize data transfer</li>
     </ul>
 
     <p>You are responsible for ensuring you have appropriate authorization to capture and process screen content that may include messages from other people.</p>
@@ -243,10 +243,9 @@
     <h2>5. Third-Party Services</h2>
     <p>Phrased integrates with the following third-party services. Each is governed by its own privacy policy, which we encourage you to review.</p>
     <ul>
-      <li><strong>Anthropic</strong> — receives Extracted Text to generate reply suggestions. Anthropic does not use API inputs to train models by default. See <a href="https://www.anthropic.com/privacy" target="_blank">anthropic.com/privacy</a>.</li>
+      <li><strong>Anthropic</strong> — receives screenshots of your screen to analyze conversations and generate reply suggestions. Anthropic does not use API inputs to train models by default. Screenshots are not retained after processing. See <a href="https://www.anthropic.com/privacy" target="_blank">anthropic.com/privacy</a>.</li>
       <li><strong>Supabase</strong> — hosts our database, storing account information, tone preferences, and reply counts. See <a href="https://supabase.com/privacy" target="_blank">supabase.com/privacy</a>.</li>
       <li><strong>Google Play Billing</strong> — processes subscription payments. We do not receive or store your payment details. See <a href="https://policies.google.com/privacy" target="_blank">policies.google.com/privacy</a>.</li>
-      <li><strong>Google ML Kit</strong> — performs OCR processing entirely on your Device. No data is transmitted to Google through this process. See <a href="https://developers.google.com/ml-kit/terms" target="_blank">developers.google.com/ml-kit/terms</a>.</li>
     </ul>
   </div>
 
@@ -255,8 +254,8 @@
     <h2>6. Permissions We Request</h2>
     <ul>
       <li><strong>Display over other apps (SYSTEM_ALERT_WINDOW)</strong> — required to render the floating bubble on top of messaging apps</li>
-      <li><strong>Screen capture (MediaProjection)</strong> — required to read the conversation on your screen when you tap the bubble. Android presents a system confirmation dialog before every capture session</li>
-      <li><strong>Internet</strong> — required to transmit Extracted Text to the AI API and to sync your account</li>
+      <li><strong>Screen capture (MediaProjection)</strong> — required to capture a screenshot of your screen when you tap the bubble. Android presents a system confirmation dialog before every capture session</li>
+      <li><strong>Internet</strong> — required to transmit screenshots to the AI API and to sync your account</li>
       <li><strong>Foreground service</strong> — required to keep the floating bubble active while you use other apps</li>
     </ul>
     <p>All permissions are used solely for the functions described above. You may revoke screen capture permission at any time by dismissing the system dialog or disabling the overlay service from within the Application.</p>
@@ -268,8 +267,8 @@
     <ul>
       <li>Account data is retained for as long as your account remains active</li>
       <li>Reply counts reset monthly in accordance with your billing cycle</li>
-      <li>Screen Content and Extracted Text are never stored — they exist in memory only during active processing and are discarded immediately after suggestions are returned</li>
-      <li>You may delete your account at any time via Settings → Delete Account, which permanently and irreversibly removes all personal data we hold about you</li>
+      <li>Screenshots exist in memory only during active processing and are discarded immediately after suggestions are returned — they are never written to disk or stored on any server</li>
+      <li>You may delete your account at any time via Settings, which permanently and irreversibly removes all personal data we hold about you</li>
     </ul>
   </div>
 
@@ -291,4 +290,16 @@
     <h2>10. Contact Us</h2>
     <p>If you have questions or concerns about this Privacy Policy or our data practices, please contact us:</p>
     <ul>
- 
+      <li>Email: <a href="mailto:privacy@phrased.app">privacy@phrased.app</a></li>
+    </ul>
+  </div>
+
+  <hr />
+  <footer>
+    <span>&copy; 2026 Phrased. All rights reserved.</span>
+    <a href="terms">Terms of Service &rarr;</a>
+  </footer>
+
+</div>
+</body>
+</html>
