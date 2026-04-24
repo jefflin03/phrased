@@ -799,85 +799,349 @@
       gap: 48px;
       align-items: center;
     }
+    /* ═══ APP-FAITHFUL ANIMATED VOICE CARD — 14s loop
+       Mirrors VoiceUploadScreen.kt: PhrasedIcon header, context tabs,
+       9:16 upload slots, "Reading your style…" loader with bouncing-dot
+       PhrasedIcon, extracted phrase chips, voice sample card. ═══ */
     .voice-visual {
       background: var(--paper-pure);
       border: 1px solid var(--line);
-      border-radius: 28px;
-      padding: 48px 32px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 28px;
+      border-radius: 24px;
+      padding: 24px 22px;
       box-shadow: 0 24px 48px -24px rgba(26,9,5,0.12);
+      position: relative;
+      overflow: hidden;
+      min-height: 580px;
     }
-    .voice-step-label {
+    .va-topbar {
+      display: flex; align-items: center; gap: 10px;
+      margin-bottom: 12px;
+    }
+    .va-topbar .phrased-mini { width: 26px; height: 26px; flex-shrink: 0; }
+    .va-topbar .phrased-mini svg { width: 100%; height: 100%; }
+    .va-topbar .small-label {
+      font-family: "Sora", sans-serif;
+      font-weight: 600; font-size: 11px;
+      color: var(--mid);
+    }
+    .va-topbar .step-label {
+      margin-left: auto;
+      font-family: "DM Sans", sans-serif;
+      font-size: 11px;
+      color: var(--mid);
+    }
+    .va-hero {
+      font-family: "Fraunces", serif;
+      font-style: italic; font-weight: 900;
+      font-size: 26px; line-height: 1.08;
+      color: var(--ink);
+      margin-bottom: 6px;
+    }
+    .va-sub {
+      font-family: "DM Sans", sans-serif;
+      font-size: 12px;
+      color: var(--mid);
+      line-height: 1.5;
+      margin-bottom: 16px;
+    }
+    .va-tabs {
+      display: flex; gap: 8px;
+      margin-bottom: 14px;
+    }
+    .va-tab {
+      flex: 1;
+      padding: 7px 12px;
+      border-radius: 100px;
+      border: 1.5px solid var(--line);
+      background: white;
+      text-align: center;
+      transition: background .3s ease, border-color .3s ease, color .3s ease;
+    }
+    .va-tab .tab-t {
+      display: block;
+      font-family: "Sora", sans-serif;
+      font-weight: 700; font-size: 11px;
+      color: var(--ink);
+      margin-bottom: 1px;
+    }
+    .va-tab .tab-s {
+      display: block;
+      font-family: "DM Sans", sans-serif;
+      font-size: 9px;
+      color: var(--mid);
+    }
+    .va-tab.active { background: var(--coral); border-color: var(--coral); }
+    .va-tab.active .tab-t { color: white; }
+    .va-tab.active .tab-s { color: rgba(255,255,255,0.78); }
+    .va-tab.complete { animation: tabComplete 14s infinite ease; }
+    @keyframes tabComplete {
+      0%, 35% { background: var(--coral); border-color: var(--coral); }
+      40%, 85% { background: #4ADE80; border-color: #4ADE80; }
+      90%, 100% { background: var(--coral); border-color: var(--coral); }
+    }
+    .va-slots {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 8px;
+    }
+    .va-slot {
+      aspect-ratio: 9/16;
+      border: 2px solid var(--line);
+      border-radius: 12px;
+      position: relative;
+      background: white;
+      overflow: hidden;
+      transition: border-color .3s ease, background .3s ease;
+    }
+    .va-slot .va-empty {
+      position: absolute; inset: 0;
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      gap: 4px;
+    }
+    .va-empty .plus-circle {
+      width: 26px; height: 26px;
+      border-radius: 50%;
+      background: var(--coral-soft);
+      display: flex; align-items: center; justify-content: center;
+      color: var(--coral);
+      font-size: 17px; font-weight: 700;
+    }
+    .va-empty .add-label {
+      font-family: "DM Sans", sans-serif;
+      font-size: 9px;
+      color: var(--mid);
+    }
+    .va-slot:nth-child(1) { animation: slotFill1 14s infinite ease; }
+    .va-slot:nth-child(2) { animation: slotFill2 14s infinite ease; }
+    .va-slot:nth-child(3) { animation: slotFill3 14s infinite ease; }
+    @keyframes slotFill1 {
+      0%, 5% { background: white; border-color: var(--line); }
+      8%, 90% { background: rgba(232,64,28,0.08); border-color: var(--coral); }
+      95%, 100% { background: white; border-color: var(--line); }
+    }
+    @keyframes slotFill2 {
+      0%, 12% { background: white; border-color: var(--line); }
+      15%, 90% { background: rgba(232,64,28,0.08); border-color: var(--coral); }
+      95%, 100% { background: white; border-color: var(--line); }
+    }
+    @keyframes slotFill3 {
+      0%, 19% { background: white; border-color: var(--line); }
+      22%, 90% { background: rgba(232,64,28,0.08); border-color: var(--coral); }
+      95%, 100% { background: white; border-color: var(--line); }
+    }
+    .va-slot:nth-child(1) .va-empty { animation: emptyHide1 14s infinite ease; }
+    .va-slot:nth-child(2) .va-empty { animation: emptyHide2 14s infinite ease; }
+    .va-slot:nth-child(3) .va-empty { animation: emptyHide3 14s infinite ease; }
+    @keyframes emptyHide1 { 0%, 5% { opacity: 1; } 8%, 100% { opacity: 0; } }
+    @keyframes emptyHide2 { 0%, 12% { opacity: 1; } 15%, 100% { opacity: 0; } }
+    @keyframes emptyHide3 { 0%, 19% { opacity: 1; } 22%, 100% { opacity: 0; } }
+    .va-thumb {
+      position: absolute; inset: 4px;
+      padding: 6px 5px;
+      display: flex; flex-direction: column; gap: 3px;
+      opacity: 0;
+      transform: translateY(-18px) scale(0.88);
+    }
+    .va-thumb .ln { height: 5px; border-radius: 2px; }
+    .va-thumb .ln.them   { width: 72%; background: #D4D4D8; }
+    .va-thumb .ln.them.s { width: 52%; }
+    .va-thumb .ln.me     { width: 60%; background: #007AFF; align-self: flex-end; }
+    .va-slot:nth-child(1) .va-thumb { animation: drop1 14s infinite ease; }
+    .va-slot:nth-child(2) .va-thumb { animation: drop2 14s infinite ease; }
+    .va-slot:nth-child(3) .va-thumb { animation: drop3 14s infinite ease; }
+    @keyframes drop1 {
+      0%, 5% { opacity: 0; transform: translateY(-18px) scale(0.88); }
+      9%, 90% { opacity: 1; transform: translateY(0) scale(1); }
+      95%, 100% { opacity: 0; }
+    }
+    @keyframes drop2 {
+      0%, 12% { opacity: 0; transform: translateY(-18px) scale(0.88); }
+      16%, 90% { opacity: 1; transform: translateY(0) scale(1); }
+      95%, 100% { opacity: 0; }
+    }
+    @keyframes drop3 {
+      0%, 19% { opacity: 0; transform: translateY(-18px) scale(0.88); }
+      23%, 90% { opacity: 1; transform: translateY(0) scale(1); }
+      95%, 100% { opacity: 0; }
+    }
+    .va-check {
+      position: absolute;
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%) scale(0.5);
+      width: 28px; height: 28px;
+      border-radius: 50%;
+      background: #4ADE80;
+      display: flex; align-items: center; justify-content: center;
+      color: white; font-weight: 800; font-size: 15px;
+      opacity: 0;
+      animation: checkAppear 14s infinite ease;
+    }
+    .ready-label {
+      position: absolute;
+      bottom: 14px; left: 0; right: 0;
+      text-align: center;
+      font-family: "DM Sans", sans-serif;
+      font-weight: 700; font-size: 9px;
+      color: var(--coral);
+      opacity: 0;
+      animation: readyAppear 14s infinite ease;
+    }
+    @keyframes checkAppear {
+      0%, 28% { opacity: 0; transform: translate(-50%, -50%) scale(0.5); }
+      31%, 88% { opacity: 1; transform: translate(-50%, -70%) scale(1); }
+      92%, 100% { opacity: 0; }
+    }
+    @keyframes readyAppear {
+      0%, 29% { opacity: 0; }
+      33%, 88% { opacity: 1; }
+      92%, 100% { opacity: 0; }
+    }
+    /* "Reading your style…" overlay — the hero moment with big PhrasedIcon */
+    .va-reading {
+      position: absolute; inset: 0;
+      background: rgba(255,255,255,0.96);
+      backdrop-filter: blur(3px);
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      gap: 18px;
+      opacity: 0;
+      z-index: 10;
+      animation: readingShow 14s infinite ease;
+    }
+    @keyframes readingShow {
+      0%, 38% { opacity: 0; pointer-events: none; }
+      42%, 58% { opacity: 1; }
+      62%, 100% { opacity: 0; pointer-events: none; }
+    }
+    .va-big-icon {
+      width: 96px; height: 96px;
+      position: relative;
+    }
+    .va-big-icon svg { width: 100%; height: 100%; }
+    .va-big-icon .dot {
+      animation-duration: 1190ms;
+      animation-iteration-count: infinite;
+      animation-timing-function: ease;
+    }
+    .va-big-icon .dot1 { animation-name: bounceDot; }
+    .va-big-icon .dot2 { animation-name: bounceDot; animation-delay: 180ms; }
+    .va-big-icon .dot3 { animation-name: bounceDot; animation-delay: 360ms; }
+    @keyframes bounceDot {
+      0%, 100% { transform: translateY(0); }
+      18% { transform: translateY(-6px); }
+      36% { transform: translateY(0); }
+    }
+    .va-big-icon::before {
+      content: "";
+      position: absolute;
+      inset: -14px;
+      border-radius: 32px;
+      background: radial-gradient(circle, rgba(232,64,28,0.22), transparent 70%);
+      animation: haloPulse 1.8s ease-in-out infinite;
+      z-index: -1;
+    }
+    @keyframes haloPulse {
+      0%, 100% { transform: scale(0.95); opacity: 0.6; }
+      50% { transform: scale(1.1); opacity: 1; }
+    }
+    .va-reading-headline {
+      font-family: "Fraunces", serif;
+      font-weight: 900; font-style: italic;
+      font-size: 22px; line-height: 1;
+      color: var(--ink);
+      text-align: center;
+    }
+    .va-reading-sub {
+      font-family: "DM Sans", sans-serif;
+      font-size: 12px;
+      color: var(--mid);
+      text-align: center;
+    }
+    /* Extracted phrase chips */
+    .va-extracts {
+      position: absolute; inset: 0;
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      gap: 14px; padding: 28px;
+      opacity: 0;
+      animation: extractsShow 14s infinite ease;
+      z-index: 9;
+    }
+    @keyframes extractsShow {
+      0%, 58% { opacity: 0; pointer-events: none; }
+      62%, 82% { opacity: 1; pointer-events: none; }
+      85%, 100% { opacity: 0; pointer-events: none; }
+    }
+    .va-extracts .label-small {
       font-family: "Sora", sans-serif;
       font-weight: 800; font-size: 10px;
-      letter-spacing: 1.8px;
-      text-transform: uppercase;
-      color: var(--mid);
-    }
-    .voice-thumbs {
-      display: flex; gap: 14px;
-    }
-    .vt {
-      width: 84px; height: 148px;
-      background: white;
-      border: 1.5px solid var(--line);
-      border-radius: 12px;
-      padding: 8px 7px;
-      display: flex; flex-direction: column; gap: 5px;
-      position: relative;
-      box-shadow: 0 6px 14px rgba(26,9,5,0.06);
-    }
-    .vt .them { height: 11px; width: 74%; background: #E9E9EB; border-radius: 3px; }
-    .vt .them.s { width: 55%; }
-    .vt .me { height: 11px; width: 68%; background: #007AFF; border-radius: 3px; align-self: flex-end; }
-    .vt.hl { border-color: var(--coral); box-shadow: 0 0 0 4px rgba(232,64,28,0.14); }
-    .vt .extract-badge {
-      position: absolute;
-      bottom: -8px; left: 50%;
-      transform: translateX(-50%);
-      background: var(--coral); color: white;
-      font-family: "Sora", sans-serif;
-      font-weight: 800; font-size: 8px;
-      letter-spacing: 0.5px;
-      padding: 3px 7px; border-radius: 20px;
-      white-space: nowrap;
-    }
-    .voice-arrow {
-      font-family: "Sora", sans-serif;
-      font-weight: 800; font-size: 11px;
       letter-spacing: 1.5px;
-      color: var(--mid);
-      display: flex; flex-direction: column; align-items: center; gap: 4px;
+      text-transform: uppercase;
+      color: var(--coral);
     }
-    .voice-arrow .arr {
-      font-size: 24px; color: var(--coral);
-      animation: voiceArrBob 1.8s ease-in-out infinite;
+    .va-chips {
+      display: flex; flex-wrap: wrap;
+      justify-content: center; gap: 8px;
+      max-width: 320px;
     }
-    @keyframes voiceArrBob { 0%,100% { transform: translateY(0); } 50% { transform: translateY(4px); } }
-    .voice-card {
+    .va-chip {
+      padding: 6px 12px;
       background: white;
       border: 1.5px solid var(--coral);
-      border-radius: 16px;
-      padding: 18px 22px;
-      max-width: 300px;
-      box-shadow: 0 0 0 6px rgba(232,64,28,0.08);
+      border-radius: 100px;
+      font-family: "Fraunces", serif;
+      font-style: italic;
+      font-size: 13px;
+      color: var(--ink);
+      opacity: 0;
+      transform: translateY(6px) scale(0.9);
+      animation: chipPop 14s infinite ease;
     }
-    .voice-card .vc-label {
+    .va-chip:nth-of-type(1) { animation-delay: 0s; }
+    .va-chip:nth-of-type(2) { animation-delay: 0.15s; }
+    .va-chip:nth-of-type(3) { animation-delay: 0.3s; }
+    .va-chip:nth-of-type(4) { animation-delay: 0.45s; }
+    .va-chip:nth-of-type(5) { animation-delay: 0.6s; }
+    @keyframes chipPop {
+      0%, 60% { opacity: 0; transform: translateY(6px) scale(0.9); }
+      66%, 82% { opacity: 1; transform: translateY(0) scale(1); }
+      86%, 100% { opacity: 0; transform: scale(1); }
+    }
+    /* Final voice sample card */
+    .va-sample-card {
+      position: absolute;
+      bottom: 24px; left: 22px; right: 22px;
+      background: white;
+      border: 1.5px solid var(--coral);
+      border-radius: 14px;
+      padding: 14px 16px;
+      box-shadow: 0 8px 24px rgba(232,64,28,0.15), 0 0 0 5px rgba(232,64,28,0.06);
+      opacity: 0;
+      transform: translateY(16px);
+      animation: sampleShow 14s infinite ease;
+      z-index: 11;
+    }
+    @keyframes sampleShow {
+      0%, 80% { opacity: 0; transform: translateY(16px); }
+      83%, 93% { opacity: 1; transform: translateY(0); }
+      96%, 100% { opacity: 0; transform: translateY(-8px); }
+    }
+    .va-sample-label {
+      display: flex; align-items: center; gap: 6px;
       font-family: "Sora", sans-serif;
       font-weight: 800; font-size: 9px;
       letter-spacing: 1.4px;
       text-transform: uppercase;
       color: var(--coral);
-      margin-bottom: 8px;
-      display: block;
+      margin-bottom: 6px;
     }
-    .voice-card .sample {
+    .va-sample-label svg { width: 14px; height: 14px; border-radius: 3px; }
+    .va-sample-text {
       font-family: "Fraunces", serif;
       font-style: italic;
-      font-size: 18px; line-height: 1.4;
+      font-size: 15px;
+      line-height: 1.4;
       color: var(--ink);
     }
     .voice-copy h3 {
@@ -1413,40 +1677,132 @@
         </div>
 
         <div class="voice-visual reveal">
-          <div class="voice-step-label">① Upload a few chats</div>
-          <div class="voice-thumbs">
-            <div class="vt">
-              <div class="them"></div>
-              <div class="me"></div>
-              <div class="them s"></div>
-              <div class="me"></div>
-              <div class="them"></div>
-              <div class="me"></div>
+          <div class="va-topbar">
+            <div class="phrased-mini">
+              <svg viewBox="0 0 180 180" xmlns="http://www.w3.org/2000/svg">
+                <rect width="180" height="180" rx="40" fill="#E8401C"/>
+                <ellipse cx="92" cy="85" rx="54" ry="40" fill="#1A0905"/>
+                <ellipse cx="92" cy="83" rx="49" ry="35" fill="white"/>
+                <path d="M72 116 L60 136 L88 122 Z" fill="#1A0905"/>
+                <path d="M74 114 L64 130 L87 119 Z" fill="white"/>
+                <circle cx="74" cy="83" r="6" fill="#1A0905"/>
+                <circle cx="92" cy="83" r="6" fill="#1A0905"/>
+                <circle cx="110" cy="83" r="6" fill="#1A0905"/>
+              </svg>
             </div>
-            <div class="vt hl">
-              <div class="them s"></div>
-              <div class="me"></div>
-              <div class="them"></div>
-              <div class="me"></div>
-              <div class="them s"></div>
-              <div class="me"></div>
-              <div class="extract-badge">✦ EXTRACTING</div>
+            <div class="small-label">Let Phrased learn your voice</div>
+            <div class="step-label">Voice setup</div>
+          </div>
+
+          <div class="va-hero">Drop in some chats.</div>
+          <div class="va-sub">We extract only your messages to understand how you text. The more you add, the more Phrased sounds like you.</div>
+
+          <div class="va-tabs">
+            <div class="va-tab active complete">
+              <span class="tab-t">💬 With friends</span>
+              <span class="tab-s">iMessage · WhatsApp</span>
             </div>
-            <div class="vt">
-              <div class="them"></div>
-              <div class="me"></div>
-              <div class="them"></div>
-              <div class="me"></div>
-              <div class="them s"></div>
+            <div class="va-tab">
+              <span class="tab-t">💼 At work</span>
+              <span class="tab-s">Slack · Teams</span>
             </div>
           </div>
-          <div class="voice-arrow">
-            <span class="arr">↓</span>
-            <span>② Phrased learns you</span>
+
+          <div class="va-slots">
+            <div class="va-slot">
+              <div class="va-empty">
+                <div class="plus-circle">+</div>
+                <div class="add-label">Add</div>
+              </div>
+              <div class="va-thumb">
+                <span class="ln them"></span>
+                <span class="ln me"></span>
+                <span class="ln them s"></span>
+                <span class="ln me"></span>
+                <span class="ln them"></span>
+              </div>
+              <div class="va-check">✓</div>
+              <div class="ready-label">Ready</div>
+            </div>
+            <div class="va-slot">
+              <div class="va-empty">
+                <div class="plus-circle">+</div>
+                <div class="add-label">Add</div>
+              </div>
+              <div class="va-thumb">
+                <span class="ln them s"></span>
+                <span class="ln me"></span>
+                <span class="ln them"></span>
+                <span class="ln me"></span>
+                <span class="ln them s"></span>
+                <span class="ln me"></span>
+              </div>
+              <div class="va-check">✓</div>
+              <div class="ready-label">Ready</div>
+            </div>
+            <div class="va-slot">
+              <div class="va-empty">
+                <div class="plus-circle">+</div>
+                <div class="add-label">Add</div>
+              </div>
+              <div class="va-thumb">
+                <span class="ln them"></span>
+                <span class="ln me"></span>
+                <span class="ln them"></span>
+                <span class="ln me"></span>
+                <span class="ln them s"></span>
+              </div>
+              <div class="va-check">✓</div>
+              <div class="ready-label">Ready</div>
+            </div>
           </div>
-          <div class="voice-card">
-            <span class="vc-label">③ Your voice</span>
-            <div class="sample">"lol yeah sounds good let me check my cal rq"</div>
+
+          <!-- "Reading your style…" loader — matches in-app copy exactly -->
+          <div class="va-reading">
+            <div class="va-big-icon">
+              <svg viewBox="0 0 180 180" xmlns="http://www.w3.org/2000/svg">
+                <rect width="180" height="180" rx="40" fill="#E8401C"/>
+                <ellipse cx="92" cy="85" rx="54" ry="40" fill="#1A0905"/>
+                <ellipse cx="92" cy="83" rx="49" ry="35" fill="white"/>
+                <path d="M72 116 L60 136 L88 122 Z" fill="#1A0905"/>
+                <path d="M74 114 L64 130 L87 119 Z" fill="white"/>
+                <circle class="dot dot1" cx="74" cy="83" r="6" fill="#1A0905" style="transform-origin: 74px 83px;"/>
+                <circle class="dot dot2" cx="92" cy="83" r="6" fill="#1A0905" style="transform-origin: 92px 83px;"/>
+                <circle class="dot dot3" cx="110" cy="83" r="6" fill="#1A0905" style="transform-origin: 110px 83px;"/>
+              </svg>
+            </div>
+            <div class="va-reading-headline">Reading your style…</div>
+            <div class="va-reading-sub">This takes a few seconds</div>
+          </div>
+
+          <!-- Extracted voice phrases -->
+          <div class="va-extracts">
+            <div class="label-small">✦ Voice captured</div>
+            <div class="va-chips">
+              <div class="va-chip">"lol"</div>
+              <div class="va-chip">"yeah for sure"</div>
+              <div class="va-chip">"let me check rq"</div>
+              <div class="va-chip">"sounds good"</div>
+              <div class="va-chip">"haha same"</div>
+            </div>
+          </div>
+
+          <!-- Final voice sample card -->
+          <div class="va-sample-card">
+            <div class="va-sample-label">
+              <svg viewBox="0 0 180 180" xmlns="http://www.w3.org/2000/svg">
+                <rect width="180" height="180" rx="40" fill="#E8401C"/>
+                <ellipse cx="92" cy="85" rx="54" ry="40" fill="#1A0905"/>
+                <ellipse cx="92" cy="83" rx="49" ry="35" fill="white"/>
+                <path d="M72 116 L60 136 L88 122 Z" fill="#1A0905"/>
+                <path d="M74 114 L64 130 L87 119 Z" fill="white"/>
+                <circle cx="74" cy="83" r="6" fill="#1A0905"/>
+                <circle cx="92" cy="83" r="6" fill="#1A0905"/>
+                <circle cx="110" cy="83" r="6" fill="#1A0905"/>
+              </svg>
+              Your voice
+            </div>
+            <div class="va-sample-text">"lol yeah sounds good let me check my cal rq"</div>
           </div>
         </div>
       </div>
