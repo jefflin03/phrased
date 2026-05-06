@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<!--
+  ════════════════════════════════════════════════════════════════
+  Open Graph image template — 1200 × 630.
+  Open this file in a browser at exactly 1200×630 viewport, take
+  a screenshot, save as `og-image.png` in the same folder. Used
+  for Twitter / Facebook / LinkedIn / iMessage link previews.
+  ════════════════════════════════════════════════════════════════
+-->
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Phrased OG image (1200×630)</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,900;1,900&family=Sora:wght@700;800&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #888; padding: 0; }
+  .canvas {
+    width: 1200px;
+    height: 630px;
+    background:
+      radial-gradient(ellipse 700px 500px at 85% 20%, rgba(240,165,0,0.42), transparent 55%),
+      radial-gradient(ellipse 600px 500px at 12% 80%, rgba(232,64,28,0.32), transparent 55%),
+      linear-gradient(165deg, #FFF5E8 0%, #FADFC2 50%, #F4C79E 100%);
+    position: relative;
+    overflow: hidden;
+    font-family: "Sora", system-ui, sans-serif;
+    color: #1A0905;
+  }
+  .grain {
+    position: absolute; inset: 0;
+    background-image: radial-gradient(circle, rgba(26,9,5,0.12) 1px, transparent 1.2px);
+    background-size: 11px 11px;
+    opacity: 0.18;
+    mix-blend-mode: multiply;
+    pointer-events: none;
+  }
+
+  .layout {
+    position: relative;
+    height: 100%;
+    padding: 72px 80px;
+    display: flex;
+    align-items: center;
+    gap: 60px;
+  }
+
+  /* Left: copy */
+  .copy { flex: 1; }
+  .brand-row {
+    display: flex; align-items: center; gap: 14px;
+    margin-bottom: 32px;
+  }
+  .brand-icon { width: 60px; height: 60px; border-radius: 14px; }
+  .wordmark {
+    font-family: "Sora", sans-serif;
+    font-weight: 800; font-size: 32px;
+    color: #1A0905;
+    letter-spacing: -0.02em;
+  }
+  h1 {
+    font-family: "Fraunces", serif;
+    font-weight: 400;
+    font-size: 96px;
+    line-height: 0.94;
+    letter-spacing: -0.04em;
+    color: #1A0905;
+    margin-bottom: 24px;
+  }
+  h1 em {
+    font-style: italic; font-weight: 900;
+    color: #E8401C;
+  }
+  .tagline {
+    font-family: "Fraunces", serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 1.4;
+    color: #6B4A40;
+    max-width: 560px;
+  }
+  .url-pill {
+    display: inline-flex; align-items: center; gap: 10px;
+    margin-top: 36px;
+    padding: 10px 18px;
+    background: #1A0905;
+    color: white;
+    border-radius: 100px;
+    font-family: "Sora", sans-serif;
+    font-weight: 700; font-size: 16px;
+    letter-spacing: 0.5px;
+  }
+  .url-pill .dot {
+    width: 8px; height: 8px; border-radius: 50%;
+    background: #E8401C;
+    box-shadow: 0 0 12px rgba(232,64,28,0.6);
+  }
+
+  /* Right: floating chat artifacts */
+  .right {
+    width: 380px;
+    height: 100%;
+    position: relative;
+  }
+  .chat-bubble {
+    position: absolute;
+    background: white;
+    border: 1.5px solid rgba(26,9,5,0.06);
+    box-shadow: 0 14px 40px rgba(26,9,5,0.18);
+    padding: 14px 20px;
+    border-radius: 22px 22px 22px 6px;
+    font-family: "Sora", sans-serif;
+    font-weight: 600;
+    font-size: 22px;
+    color: #1A0905;
+  }
+  .chat-bubble.b1 { top: 30px; left: -20px; transform: rotate(-3deg); }
+  .chat-bubble.b2 { top: 130px; right: 0; transform: rotate(2deg); font-size: 38px; padding: 12px 24px; border-radius: 22px; }
+  .chat-bubble.b3 { top: 250px; left: 10px; transform: rotate(-1deg); max-width: 320px; }
+  .chat-bubble.b4 { top: 370px; right: 20px; transform: rotate(4deg); }
+
+  .chat-bubble.phrased {
+    background: #1A0905;
+    color: white;
+    border-color: #1A0905;
+    border-radius: 22px 22px 6px 22px;
+    box-shadow: 0 18px 50px rgba(232,64,28,0.3);
+  }
+  .chat-bubble.phrased .label {
+    display: block;
+    font-family: "Sora", sans-serif;
+    font-weight: 800; font-size: 11px;
+    letter-spacing: 1.6px;
+    text-transform: uppercase;
+    color: #E8401C;
+    margin-bottom: 4px;
+  }
+</style>
+</head>
+<body>
+
+<div class="canvas">
+  <div class="grain"></div>
+
+  <div class="layout">
+    <div class="copy">
+      <div class="brand-row">
+        <svg class="brand-icon" viewBox="0 0 180 180" xmlns="http://www.w3.org/2000/svg">
+          <rect width="180" height="180" rx="40" fill="#E8401C"/>
+          <ellipse cx="92" cy="85" rx="54" ry="40" fill="#1A0905"/>
+          <ellipse cx="92" cy="83" rx="49" ry="35" fill="white"/>
+          <path d="M72 116 L60 136 L88 122 Z" fill="#1A0905"/>
+          <path d="M74 114 L64 130 L87 119 Z" fill="white"/>
+          <circle cx="74" cy="83" r="6" fill="#1A0905"/>
+          <circle cx="92" cy="83" r="6" fill="#1A0905"/>
+          <circle cx="110" cy="83" r="6" fill="#1A0905"/>
+        </svg>
+        <span class="wordmark">Phrased</span>
+      </div>
+
+      <h1>Text like<br/><em>yourself.</em></h1>
+      <p class="tagline">The AI texting sidekick for when you can&rsquo;t find the words.</p>
+
+      <div class="url-pill">
+        <span class="dot"></span>
+        phrased.app
+      </div>
+    </div>
+
+    <div class="right">
+      <div class="chat-bubble b1">hey</div>
+      <div class="chat-bubble b2">🔥</div>
+      <div class="chat-bubble b3">we should hang out sometime 🙂</div>
+      <div class="chat-bubble b4 phrased">
+        <span class="label">Phrased</span>
+        Yeah! Saturday work for you?
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
