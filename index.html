@@ -6,7 +6,7 @@
 
   <!-- ── Primary SEO ─────────────────────────────────────────── -->
   <title>Phrased — Text Like Yourself · AI Texting Sidekick</title>
-  <meta name="description" content="Phrased reads the vibe and helps you reply in your own voice. Stop overthinking texts — pick from four tone-matched suggestions or describe what you mean and let Phrased phrase it. Android, in closed beta." />
+  <meta name="description" content="Phrased reads the vibe and helps you reply in your own voice. Stop overthinking texts - pick from four tone-matched suggestions or describe what you mean and let Phrased phrase it. Android, in closed beta." />
   <meta name="keywords" content="AI texting assistant, smart reply, vibe texting, texting helper, AI chat suggestions, reply generator, texting anxiety, Android texting app, Phrased, dating app reply helper, Slack reply assistant" />
   <meta name="author" content="Phrased" />
   <link rel="canonical" href="https://phrased.app/" />
@@ -24,7 +24,7 @@
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Phrased" />
   <meta property="og:title" content="Phrased — Text Like Yourself" />
-  <meta property="og:description" content="Reads the vibe. Matches your energy. The AI texting sidekick for when you can't find the words." />
+  <meta property="og:description" content="Reads the vibe, matches your energy, and helps you reply in your own voice." />
   <meta property="og:url" content="https://phrased.app/" />
   <meta property="og:image" content="https://phrased.app/og-image.png" />
   <meta property="og:image:width" content="1200" />
@@ -35,7 +35,7 @@
   <!-- ── Twitter Card ────────────────────────────────────────── -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Phrased — Text Like Yourself" />
-  <meta name="twitter:description" content="Reads the vibe. Matches your energy. The AI texting sidekick for when you can't find the words." />
+  <meta name="twitter:description" content="Reads the vibe, matches your energy, and helps you reply in your own voice." />
   <meta name="twitter:image" content="https://phrased.app/og-image.png" />
 
   <!-- ── Icons ───────────────────────────────────────────────── -->
@@ -48,26 +48,36 @@
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
     "name": "Phrased",
-    "alternateName": "Phrased — AI Texting Sidekick",
+    "alternateName": "Phrased - AI Texting Sidekick",
     "applicationCategory": "ProductivityApplication",
     "operatingSystem": "Android 8.0 or later",
     "description": "Phrased reads the vibe of any chat and suggests four tone-matched replies in your own voice. When the four don't fit, just type the gist and Phrased phrases it for you.",
     "url": "https://phrased.app/",
     "image": "https://phrased.app/og-image.png",
     "screenshot": "https://phrased.app/og-image.png",
-    "offers": {
-      "@type": "Offer",
-      "price": "0",
-      "priceCurrency": "USD",
-      "description": "3-day free trial, then $3.33/month yearly or $6.99/month monthly. Cancel anytime."
-    },
+    "offers": [
+      {
+        "@type": "Offer",
+        "name": "Phrased Monthly",
+        "price": "9.99",
+        "priceCurrency": "USD",
+        "description": "3-day free trial, then $9.99 billed every 30 days through Google Play."
+      },
+      {
+        "@type": "Offer",
+        "name": "Phrased Yearly",
+        "price": "49.99",
+        "priceCurrency": "USD",
+        "description": "3-day free trial, then $49.99 billed every 365 days through Google Play."
+      }
+    ],
     "featureList": [
-      "Quick Picks — four tone-matched replies per tap",
-      "Vibe Text — describe what you want to say",
+      "Quick Picks - four tone-matched replies per tap",
+      "Vibe Text - describe what you want to say",
       "Voice training from your own chat screenshots",
       "Casual / Professional register toggle per app",
       "Works on iMessage, WhatsApp, Telegram, Slack, Tinder, Hinge, Bumble, Teams",
-      "Privacy-first: screenshots never leave the device"
+      "Privacy-first: screenshots are processed securely and not retained after use"
     ]
   }
   </script>
@@ -1652,17 +1662,231 @@
 
     /* ─── Responsive ──────────────────────────────────────── */
     @media (max-width: 960px) {
-      .hero { grid-template-columns: 1fr; padding: 60px 24px 0; gap: 40px; }
-      .sticky-inner { grid-template-columns: 1fr; gap: 32px; padding: 0 24px; }
-      .scroll-section { height: 240vh; }
-      .section { padding: 80px 24px; }
-      .voice-layout { grid-template-columns: 1fr; gap: 32px; }
-      .utility-strip { grid-template-columns: 1fr 1fr; }
+      nav {
+        padding: 0 24px;
+        height: 64px;
+      }
+      .nav-links {
+        gap: 18px;
+        font-size: 13px;
+      }
+      .nav-cta {
+        padding: 10px 16px;
+        font-size: 13px;
+      }
+      .progress { top: 64px; }
+      .hero {
+        padding: 72px 24px 24px;
+        min-height: auto;
+      }
+      .hero-phrases {
+        gap: 18px;
+        margin: 32px 0;
+      }
+      .scroll-section {
+        height: auto;
+        margin-top: 0;
+        padding-top: 24px;
+      }
+      .sticky-wrap {
+        position: static;
+        top: auto;
+        height: auto;
+        padding-bottom: 32px;
+      }
+      .sticky-inner {
+        grid-template-columns: 1fr;
+        gap: 32px;
+        padding: 0 24px;
+      }
+      .stage { padding-top: 8px; }
+      .phone {
+        width: min(100%, 320px);
+        height: auto;
+        aspect-ratio: 336 / 680;
+        margin: 0 auto;
+      }
+      .vt-section { padding: 88px 24px 56px; }
       .vt-demo { grid-template-columns: 1fr; gap: 16px; }
       .vt-arrow { transform: rotate(90deg); }
-      .trust-grid { grid-template-columns: 1fr; }
-      .trust { padding: 56px 32px; margin: 20px 16px 0; border-radius: 24px; }
-      .closer { margin: 60px auto 80px; }
+      .paralysis { padding: 88px 24px 72px; }
+      .paralysis-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 24px 20px;
+        margin-top: 40px;
+        margin-bottom: 56px;
+      }
+      .section { padding: 88px 24px; }
+      .section-hdr { margin-bottom: 40px; }
+      .voice-layout { grid-template-columns: 1fr; gap: 32px; }
+      .voice-visual { min-height: auto; }
+      .utility-strip { grid-template-columns: 1fr 1fr; }
+      .trust {
+        padding: 56px 24px;
+        margin: 20px 16px 0;
+        border-radius: 24px;
+      }
+      .compat {
+        margin: 48px 16px 0;
+        padding: 40px 24px;
+        border-radius: 24px;
+      }
+      .closer {
+        margin: 64px auto 80px;
+        padding: 0 24px;
+      }
+    }
+
+    @media (max-width: 640px) {
+      nav {
+        padding: 0 16px;
+        height: 60px;
+      }
+      .nav-brand {
+        gap: 8px;
+        font-size: 15px;
+        min-width: 0;
+      }
+      .nav-brand svg {
+        width: 28px;
+        height: 28px;
+      }
+      .nav-links { display: none; }
+      .nav-cta {
+        padding: 8px 10px;
+        font-size: 0;
+        white-space: nowrap;
+      }
+      .nav-cta::after {
+        content: "Join beta";
+        font-size: 11px;
+      }
+      .progress { top: 60px; }
+      .page-surface {
+        border-top-left-radius: 24px;
+        border-top-right-radius: 24px;
+        margin-top: -24px;
+      }
+      .hero {
+        padding: 48px 20px 20px;
+        align-items: flex-start;
+        text-align: left;
+      }
+      .hero-copy {
+        max-width: 100%;
+        width: 100%;
+        align-items: flex-start;
+      }
+      h1.display {
+        font-size: clamp(30px, 9.8vw, 42px);
+        line-height: 1.02;
+        margin-bottom: 18px;
+      }
+      h1.display br { display: none; }
+      .hero-phrases {
+        gap: 14px;
+        margin: 24px 0;
+        max-width: 100%;
+        align-items: flex-start;
+      }
+      .hero-phrase { font-size: 17px; }
+      .hero-phrase br { display: none; }
+      .hero-scroll-hint {
+        font-size: 10px;
+        letter-spacing: 1.2px;
+      }
+      .sticky-inner {
+        padding: 0 20px;
+        gap: 24px;
+      }
+      .sticky-copy h2 {
+        font-size: clamp(30px, 9vw, 42px);
+        margin-bottom: 12px;
+      }
+      .sticky-copy p {
+        font-size: 15px;
+        max-width: 100%;
+      }
+      .phone { width: min(100%, 292px); }
+      .phrased-fab {
+        bottom: 80px;
+        right: 14px;
+        width: 46px;
+        height: 46px;
+      }
+      .panel { padding: 8px 12px 16px; }
+      .vt-section,
+      .paralysis,
+      .section {
+        padding: 72px 20px;
+      }
+      .vt-hdr,
+      .section-hdr,
+      .trust-hdr { margin-bottom: 32px; }
+      .vt-hdr p,
+      .section-hdr p,
+      .trust-body,
+      .closer p {
+        font-size: 15px;
+      }
+      .vt-demo,
+      .voice-layout,
+      .paralysis-grid,
+      .utility-strip {
+        grid-template-columns: 1fr;
+      }
+      .vt-arrow { display: none; }
+      .vt-input,
+      .vt-output,
+      .voice-visual,
+      .util {
+        padding: 20px 18px;
+      }
+      .va-slots { grid-template-columns: repeat(2, 1fr); }
+      .va-topbar { flex-wrap: wrap; }
+      .va-topbar .step-label {
+        margin-left: 0;
+        width: 100%;
+      }
+      .va-hero { font-size: 22px; }
+      .voice-copy h3 {
+        font-size: 32px;
+        margin-bottom: 16px;
+      }
+      .paralysis-grid {
+        gap: 20px;
+        margin-top: 32px;
+        margin-bottom: 40px;
+      }
+      .par-bubble,
+      .p-question { font-size: 16px; }
+      .p-question,
+      .p-answer { max-width: 100%; }
+      .trust {
+        padding: 40px 20px;
+        margin: 12px 12px 0;
+      }
+      .compat {
+        margin: 32px 12px 0;
+        padding: 32px 18px;
+      }
+      .compat h3 { font-size: 26px; }
+      .compat-apps {
+        gap: 8px;
+        max-width: 100%;
+      }
+      .app-chip {
+        width: 100%;
+        justify-content: flex-start;
+        padding-right: 12px;
+      }
+      .closer { margin: 56px auto 72px; }
+      .btn-primary {
+        width: 100%;
+        justify-content: center;
+        padding: 15px 22px;
+      }
+      footer { padding: 28px 20px 40px; }
     }
   </style>
 </head>
